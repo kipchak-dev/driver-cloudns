@@ -1,0 +1,37 @@
+{
+    "name": "kipchak/driver-cloudns",
+    "type": "library",
+    "description": "A ClouDNS driver for the Kipchak API Development Kit (ADK)",
+    "keywords": [
+        "APIs",
+        "ClouDNS",
+        "DNS",
+        "Microservices",
+        "Mamluk"
+    ],
+    "homepage": "https://mamluk.net",
+    "license": "MIT",
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Kipchak\\Driver\\ClouDns\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kipchak\\Driver\\ClouDns\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "kipchak/core": "^2",
+        "kipchak/driver-config": "^1",
+        "kipchak/driver-http": "^1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    }
+}

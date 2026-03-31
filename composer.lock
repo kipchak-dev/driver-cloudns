@@ -784,16 +784,16 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v12.54.1",
+            "version": "v12.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "86f874536cbda5f35c23a9908ee7f176caa4496e"
+                "reference": "83313b009c4afb6f02dbc090bdb67809756eefa2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/86f874536cbda5f35c23a9908ee7f176caa4496e",
-                "reference": "86f874536cbda5f35c23a9908ee7f176caa4496e",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/83313b009c4afb6f02dbc090bdb67809756eefa2",
+                "reference": "83313b009c4afb6f02dbc090bdb67809756eefa2",
                 "shasum": ""
             },
             "require": {
@@ -840,11 +840,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2026-02-25T15:25:18+00:00"
+            "time": "2026-03-11T14:13:25+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v12.54.1",
+            "version": "v12.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -890,7 +890,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v12.54.1",
+            "version": "v12.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -938,7 +938,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v12.54.1",
+            "version": "v12.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -1005,16 +1005,16 @@
         },
         {
             "name": "illuminate/http",
-            "version": "v12.54.1",
+            "version": "v12.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/http.git",
-                "reference": "abc31b8375666820ff2a29ca6f888594573ee8f5"
+                "reference": "9e0cf400cb81333520994952a164c737224ce9f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/http/zipball/abc31b8375666820ff2a29ca6f888594573ee8f5",
-                "reference": "abc31b8375666820ff2a29ca6f888594573ee8f5",
+                "url": "https://api.github.com/repos/illuminate/http/zipball/9e0cf400cb81333520994952a164c737224ce9f0",
+                "reference": "9e0cf400cb81333520994952a164c737224ce9f0",
                 "shasum": ""
             },
             "require": {
@@ -1063,11 +1063,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2026-03-09T14:19:52+00:00"
+            "time": "2026-03-17T18:15:14+00:00"
         },
         {
             "name": "illuminate/macroable",
-            "version": "v12.54.1",
+            "version": "v12.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -1113,7 +1113,7 @@
         },
         {
             "name": "illuminate/reflection",
-            "version": "v12.54.1",
+            "version": "v12.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/reflection.git",
@@ -1164,7 +1164,7 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v12.54.1",
+            "version": "v12.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -1221,16 +1221,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v12.54.1",
+            "version": "v12.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "e54208c0b5693becd8d3bec02f07e8db9aa4f512"
+                "reference": "cd8a3c5a95501b9ae0828ac785b5af5ffccdca45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/e54208c0b5693becd8d3bec02f07e8db9aa4f512",
-                "reference": "e54208c0b5693becd8d3bec02f07e8db9aa4f512",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/cd8a3c5a95501b9ae0828ac785b5af5ffccdca45",
+                "reference": "cd8a3c5a95501b9ae0828ac785b5af5ffccdca45",
                 "shasum": ""
             },
             "require": {
@@ -1297,15 +1297,15 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2026-03-06T15:24:01+00:00"
+            "time": "2026-03-17T13:55:49+00:00"
         },
         {
             "name": "kipchak/core",
-            "version": "2.15",
+            "version": "2.16",
             "source": {
                 "type": "git",
                 "url": "https://1x.ax/mamluk/kipchak/core",
-                "reference": "741762d0fa82cbb7000234bb0d093ad98324a8bc"
+                "reference": "7f8f8bbb7ecfbed2d25eea42ef3e32279344d194"
             },
             "require": {
                 "cuyz/valinor": "^1.17",
@@ -1334,7 +1334,7 @@
                 "apis",
                 "microservices"
             ],
-            "time": "2026-03-15T07:35:09+00:00"
+            "time": "2026-03-31T14:14:36+00:00"
         },
         {
             "name": "kipchak/driver-config",
@@ -1370,11 +1370,11 @@
         },
         {
             "name": "kipchak/driver-http",
-            "version": "1.10",
+            "version": "1.11",
             "source": {
                 "type": "git",
                 "url": "https://1x.ax/mamluk/kipchak/drivers/http",
-                "reference": "ac9dcdf81996619b9bdc06ef7c930402bf3f9199"
+                "reference": "27cf6c5b17835deea2554ae6b84128669ee7a719"
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.10",
@@ -1399,7 +1399,7 @@
                 "http",
                 "microservices"
             ],
-            "time": "2026-03-10T08:39:31+00:00"
+            "time": "2026-03-15T07:35:55+00:00"
         },
         {
             "name": "laravel/serializable-closure",

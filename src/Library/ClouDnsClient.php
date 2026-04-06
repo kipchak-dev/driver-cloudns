@@ -177,10 +177,8 @@ final class ClouDnsClient
         error_log('[ClouDNS] Request to ' . $endpoint . ' with params: ' . json_encode($mergedParams));
 
         $response = $this->http
-            ->asForm()
             ->acceptJson()
-            ->post($this->baseUrl . $endpoint, $mergedParams);
-        ->get($this->baseUrl . $endpoint, $mergedParams);
+            ->get($this->baseUrl . $endpoint, $mergedParams);
 
         $body = $response->json();
 

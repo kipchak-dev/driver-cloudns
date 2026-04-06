@@ -180,6 +180,7 @@ final class ClouDnsClient
             ->asForm()
             ->acceptJson()
             ->post($this->baseUrl . $endpoint, $mergedParams);
+        ->get($this->baseUrl . $endpoint, $mergedParams);
 
         $body = $response->json();
 
@@ -215,3 +216,4 @@ final class ClouDnsClient
         return $params;
     }
 }
+

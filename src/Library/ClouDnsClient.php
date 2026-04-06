@@ -173,16 +173,10 @@ final class ClouDnsClient
 
     private function request(string $endpoint, array $params = []): mixed
     {
-        $mergedParams = array_merge($this->authParams, $params);
-        error_log('[ClouDNS] Request to ' . $endpoint . ' with params: ' . json_encode($mergedParams));
-
         $response = $this->http
-            ->withHeaders(['Content-Type' => 'application/x-www-form-urlencoded'])
+            ->asForm()
             ->acceptJson()
-            ->withBody(http_build_query($mergedParams), 'application/x-www-form-urlencoded')
-            ->post($this->baseUrl . $endpoint);
-
-        error_log('[ClouDNS] Response status: ' . $response->status() . ', body: ' . json_encode($response->json()));
+            ->post($this->baseUrl . $endpoint, array_merge($this->authParams, $params));
 
         $body = $response->json();
 
@@ -218,4 +212,3 @@ final class ClouDnsClient
         return $params;
     }
 }
-

@@ -176,12 +176,13 @@ final class ClouDnsClient
         $mergedParams = array_merge($this->authParams, $params);
         error_log('[ClouDNS] Request to ' . $endpoint . ' with params: ' . json_encode($mergedParams));
 
-        $url = $this->baseUrl . $endpoint . '?' . http_build_query($mergedParams);
-        error_log('[ClouDNS] Full URL: ' . $url);
-
         $response = $this->http
+            ->withHeaders(['Content-Type' => 'application/x-www-form-urlencoded'])
             ->acceptJson()
-            ->get($url);
+            ->withBody(http_build_query($mergedParams), 'application/x-www-form-urlencoded')
+            ->post($this->baseUrl . $endpoint);
+
+        error_log('[ClouDNS] Response status: ' . $response->status() . ', body: ' . json_encode($response->json()));
 
         $body = $response->json();
 

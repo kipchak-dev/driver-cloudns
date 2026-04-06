@@ -173,10 +173,13 @@ final class ClouDnsClient
 
     private function request(string $endpoint, array $params = []): mixed
     {
+        $mergedParams = array_merge($this->authParams, $params);
+        error_log('[ClouDNS] Request to ' . $endpoint . ' with params: ' . json_encode($mergedParams));
+
         $response = $this->http
             ->asForm()
             ->acceptJson()
-            ->post($this->baseUrl . $endpoint, array_merge($this->authParams, $params));
+            ->post($this->baseUrl . $endpoint, $mergedParams);
 
         $body = $response->json();
 

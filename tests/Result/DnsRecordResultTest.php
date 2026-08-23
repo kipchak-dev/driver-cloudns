@@ -24,6 +24,41 @@ final class DnsRecordResultTest extends TestCase
         $this->assertNull($record->priority);
         $this->assertNull($record->weight);
         $this->assertNull($record->port);
+        $this->assertNull($record->geodnsLocation);
+        $this->assertFalse($record->failover);
+    }
+
+    public function testFromArrayMapsGeodnsLocationAndFailover(): void
+    {
+        $record = DnsRecordResult::fromArray(array_merge($this->fixture(), [
+            'geodns-location' => '4',
+            'failover'        => '1',
+        ]));
+
+        $this->assertSame(4, $record->geodnsLocation);
+        $this->assertTrue($record->failover);
+    }
+
+    public function testFromArrayTreatsGeodnsLocationOneAsTheDefaultLocation(): void
+    {
+        // ClouDNS reports the catch-all "Default" GeoDNS location as ID 1, not as an
+        // absent value — a record added without `geodns-location` comes back as 1.
+        $record = DnsRecordResult::fromArray(array_merge($this->fixture(), [
+            'geodns-location' => '1',
+        ]));
+
+        $this->assertSame(1, $record->geodnsLocation);
+    }
+
+    public function testFromArrayHandlesEmptyGeodnsLocation(): void
+    {
+        $record = DnsRecordResult::fromArray(array_merge($this->fixture(), [
+            'geodns-location' => '',
+            'failover'        => '0',
+        ]));
+
+        $this->assertNull($record->geodnsLocation);
+        $this->assertFalse($record->failover);
     }
 
     public function testFromArrayMapsMxRecordWithPriority(): void

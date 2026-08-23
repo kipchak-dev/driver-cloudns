@@ -83,7 +83,9 @@ final class ClouDnsClientTest extends TestCase
     public function testGetZonePageCountReturnsInteger(): void
     {
         $http = $this->fake([
-            'https://api.cloudns.net/dns/get-pages-count.json' => Factory::response(5, 200),
+            // ClouDNS answers this endpoint with a bare JSON number, so the fake body
+            // must be the raw string — the HTTP fake no longer accepts a scalar int.
+            'https://api.cloudns.net/dns/get-pages-count.json' => Factory::response('5', 200),
         ]);
 
         $this->assertSame(5, $this->client($http)->getZonePageCount(10));

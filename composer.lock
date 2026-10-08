@@ -1388,16 +1388,26 @@
         },
         {
             "name": "kipchak/driver-http",
-            "version": "2.9",
+            "version": "2.10",
             "source": {
                 "type": "git",
                 "url": "https://1x.ax/mamluk/kipchak/drivers/http",
-                "reference": "31944738ebb71759df08188811f8b1e8f1c78340"
+                "reference": "11e64f8a62155ccdb3510fcf208f7d9617c53642"
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.10",
                 "illuminate/http": "^13.0",
-                "kipchak/core": "^2 || ^3"
+                "kipchak/core": "^2 || ^3",
+                "psr/http-client": "^1"
+            },
+            "require-dev": {
+                "http-interop/http-factory-tests": "^2.4",
+                "kipchak/driver-config": "^1",
+                "php-http/client-integration-tests": "^4.1",
+                "phpunit/phpunit": "^12"
+            },
+            "suggest": {
+                "kipchak/driver-config": "Named clients from config/kipchak.http.php; without it, Http::get() returns Laravel's client as before"
             },
             "type": "middleware",
             "autoload": {
@@ -1417,7 +1427,7 @@
                 "http",
                 "microservices"
             ],
-            "time": "2026-10-07T03:59:24+00:00"
+            "time": "2026-10-08T05:35:21+00:00"
         },
         {
             "name": "laravel/serializable-closure",

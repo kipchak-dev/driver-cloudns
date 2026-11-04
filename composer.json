@@ -33,5 +33,20 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^12"
+    },
+    "extra": {
+        "kipchak": {
+            "type": "driver",
+            "config": "sample.config.php",
+            "configName": "kipchak.cloudns.php",
+            "initialise": "\\Kipchak\\Driver\\ClouDns\\ClouDns::initialise($container);",
+            "after": [
+                "kipchak/driver-config",
+                "kipchak/driver-logger",
+                "kipchak/driver-http"
+            ],
+            "before": [],
+            "docs": "https://kipchak.dev/docs/driver-cloudns"
+        }
     }
 }
